@@ -36,7 +36,6 @@ class Widget(QWidget):
         self.ui.setupUi(self)
         self.mem_refresh_action()
         self.ui.menubar.setNativeMenuBar(False)
-        #self.ui.actionAbout.triggered.connect(QUiLoader().load("ui/about.ui", self).show)
 
         self.ui.actionAbout.triggered.connect(self.load_about)
 
@@ -56,13 +55,6 @@ class Widget(QWidget):
         return os.path.join(base_path, relative_path)
 
     def load_about(self):
-        # ui_file_path = self.get_resource_path("ui/about.ui")
-        # ui_file = QFile(ui_file_path)
-        # ui_file.open(QFile.ReadOnly)
-
-        # form = QUiLoader().load(ui_file, self)
-        # ui_file.close()
-        # form.show()
         about_ui = AboutDialog(self)
         about_ui.exec()
 
