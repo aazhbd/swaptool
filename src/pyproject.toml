@@ -1,0 +1,10 @@
+[project]
+name = "SwapTool by AAZHBD"
+
+[tool.pyside6-project]
+files = ["form.ui", "resources.qrc", "ui/about.ui", "ui/alogic_logo.ico", "widget.py"]
+
+[tool.pyside6]
+qt_resource_files = [
+    "resources.qrc",
+]
